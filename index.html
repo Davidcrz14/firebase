@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login y Registro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Inicio de Sesión / Registro</h1>
+      <button id="toggleButton">Cambiar a Registro</button>
+
+      <form id="loginForm">
+        <input
+          type="email"
+          id="emailLogin"
+          placeholder="Correo electrónico"
+          required
+        />
+        <input
+          type="password"
+          id="passwordLogin"
+          placeholder="Contraseña"
+          required
+        />
+        <button type="submit">Iniciar Sesión</button>
+      </form>
+
+      <form id="registerForm" style="display: none">
+        <input
+          type="text"
+          id="displayName"
+          placeholder="Nombre completo"
+          required
+        />
+        <input
+          type="email"
+          id="emailRegister"
+          placeholder="Correo electrónico"
+          required
+        />
+        <input
+          type="passwo
+          rd"
+          id="passwordRegister"
+          placeholder="Contraseña"
+          required
+        />
+        <button type="submit">Registrarse</button>
+      </form>
+
+      <p id="statusMessage"></p>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <!-- Nuestro script -->
+    <script src="script.js"></script>
+  </body>
+</html>
